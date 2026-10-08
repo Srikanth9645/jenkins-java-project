@@ -1,20 +1,44 @@
-package com.quickcart;
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+        https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-import org.junit.jupiter.api.Test;
+<modelVersion>4.0.0</modelVersion>
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+<groupId>com.quickcart</groupId>
+<artifactId>quickcart-order-service</artifactId>
+<version>1.0.0</version>
 
-class OrderCalculatorTest {
+<properties>
+<maven.compiler.source>17</maven.compiler.source>
+<maven.compiler.target>17</maven.compiler.target>
+<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+<junit.version>5.10.2</junit.version>
+</properties>
 
-    @Test
-    void shouldCalculateOrderTotal() {
+<dependencies>
 
-        OrderCalculator calculator =
-                new OrderCalculator();
+<dependency>
+<groupId>org.junit.jupiter</groupId>
+<artifactId>junit-jupiter</artifactId>
+<version>${junit.version}</version>
+<scope>test</scope>
+</dependency>
 
-        double total =
-                calculator.calculateTotal(100.0, 2);
+</dependencies>
 
-        assertEquals(200.0, total);
-    }
-}
+<build>
+
+<plugins>
+
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-surefire-plugin</artifactId>
+<version>3.2.5</version>
+</plugin>
+
+</plugins>
+
+</build>
+
+</project>

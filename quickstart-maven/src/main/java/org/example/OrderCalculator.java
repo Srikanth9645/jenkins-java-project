@@ -1,4 +1,4 @@
-package com.quickcart;
+package org.example;
 
 public class OrderCalculator {
 
